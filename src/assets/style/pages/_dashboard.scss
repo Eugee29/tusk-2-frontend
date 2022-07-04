@@ -9,14 +9,12 @@
   width: 100%;
   overflow-y: auto;
 
-
   .dashboard-modal {
     position: absolute;
     padding: 2.5rem;
     border-radius: 3px;
     max-width: 768px;
     width: 100%;
-    // height: auto;
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
@@ -43,13 +41,12 @@
     .info-container {
       display: flex;
       flex-direction: column;
-      // height: 100%;
       gap: 1rem;
 
       .dashboard-grid {
         display: grid;
         flex-grow: 1;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         background-color: white;
         box-shadow: 0 3px 5px rgb(9 30 66 / 20%), 0 0 1px rgb(9 30 66 / 31%);
         border-radius: 3px;
@@ -63,7 +60,6 @@
         .complete-container {
           border-bottom: 1px solid #091e4221;
           border-top-right-radius: 3px;
-
         }
 
         .due-soon-container {
@@ -77,7 +73,6 @@
       }
 
       .main-chart-container {
-        // flex-grow: 1;
         border-radius: 3px;
         background-color: white;
         box-shadow: 0 3px 5px rgb(9 30 66 / 20%), 0 0 1px rgb(9 30 66 / 31%);

@@ -1,3 +1,27 @@
+@mixin for-mobile-layout {
+  @media (min-width: $break-mobile) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $break-wide) {
+    @content;
+  }
+}
+
 @mixin btn {
   border-radius: 3px;
   color: #fff;
@@ -18,7 +42,6 @@
     background-color: rgba(255, 255, 255, 0.3);
     color: #ffffff;
   }
-
 }
 
 @mixin btn2($bgclr, $clr) {
@@ -75,7 +98,8 @@
   border-radius: 3px;
   padding: 6px 12px 6px 6px;
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+    sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -100,7 +124,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
 }
 
 @mixin task-member-button($bgclr) {
@@ -161,7 +184,7 @@
     padding: 6px;
     color: #fff;
     font-size: 14px;
-    text-transform: none
+    text-transform: none;
   }
 
   &:hover {
@@ -210,7 +233,8 @@
   border: none;
   border-radius: 3px;
   color: #172b4d;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+    sans-serif;
   font-size: 14px;
   font-weight: 400;
   outline: none;
@@ -239,7 +263,6 @@
   color: #a5adba;
   cursor: not-allowed;
   text-align: center;
-
 
   &.enableButton {
     background-color: #0079bf;
@@ -305,12 +328,13 @@
   border-radius: 3px;
   background-color: $clr8;
   padding: 6px 12px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   font-size: rem(14px);
   color: $brand-clr4;
   font-weight: 400;
   line-height: 20px;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 
   &:hover {
     background-color: $clr9;
@@ -321,7 +345,8 @@
   display: inline-flex;
   justify-content: center;
   padding: rem(6px) rem(24px);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   font-size: rem(14px);
   font-weight: 400;
   line-height: 20px;
@@ -329,14 +354,15 @@
   background-color: $bgclr;
   border: none;
   border-radius: 3px;
-  transition: .085s;
+  transition: 0.085s;
 
   &:hover {
     background-color: darken($bgclr, 4%);
   }
 }
 
-@mixin nice-btn2 {}
+@mixin nice-btn2 {
+}
 
 @mixin custom-scrollbar {
   &::-webkit-scrollbar {
@@ -354,7 +380,6 @@
     background: #c0c4ce;
   }
 }
-
 
 @mixin custom-scrollbar2 {
   &::-webkit-scrollbar {
@@ -376,7 +401,8 @@
 
 @mixin modal-main-btn {
   text-align: left;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   width: 200%;
   height: 2rem;
   line-height: 20px;
@@ -387,7 +413,7 @@
   padding: em(6px, 14px) em(12px, 14px);
   background-color: white;
   border: none;
-  color: $brand-clr4 ;
+  color: $brand-clr4;
   cursor: pointer;
 
   &:hover {
@@ -408,7 +434,7 @@
 @mixin modal-input {
   background-color: $clr4;
   width: 100%;
-  padding: .5rem rem(12px);
+  padding: 0.5rem rem(12px);
   margin-top: 4px;
   margin-bottom: 12px;
   border: none;
@@ -416,11 +442,12 @@
   outline: none;
   border-radius: 3px;
   height: rem(36px);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   font-size: rem(14px);
   font-weight: 400;
   color: $brand-clr4;
-  transition: background-color .085s;
+  transition: background-color 0.085s;
 
   &:hover {
     background-color: $brand-clr8;
@@ -428,14 +455,15 @@
 
   &:focus {
     box-shadow: inset 0 0 0 2px $brand-clr2;
-    background-color: #FFFF;
+    background-color: #ffff;
   }
 }
 
 @mixin text-area-edit {
   height: 100%;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
   border: none;
   background: none;
   resize: none;
@@ -459,29 +487,5 @@
     overflow-wrap: break-word;
     min-height: rem(56px);
     margin-bottom: 4px;
-  }
-}
-
-@mixin for-mobile-layout {
-  @media (max-width: $break-mobile) {
-    @content;
-  }
-}
-
-@mixin for-narrow-layout {
-  @media (min-width: $break-narrow) {
-    @content;
-  }
-}
-
-@mixin for-normal-layout {
-  @media (min-width: $break-normal) {
-    @content;
-  }
-}
-
-@mixin for-wide-layout {
-  @media (min-width: $break-wide) {
-    @content;
   }
 }

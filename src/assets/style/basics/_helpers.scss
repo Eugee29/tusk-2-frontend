@@ -10,38 +10,42 @@
   @include nice-btn($brand-clr8, $brand-clr4);
 }
 
-
 .dashboard-side-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1em;
   height: 100%;
   color: $brand-clr4;
   text-transform: capitalize;
+  font-size: 0.6rem;
+
+  @include for-narrow-layout {
+    font-size: 1rem;
+  }
+  @include for-mobile-layout {
+    font-size: 0.8rem;
+  }
 
   .text-container {
     flex-grow: 1;
     align-self: flex-start;
 
     .title {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
+      margin-bottom: 1.25em;
+      font-size: 1.25em;
       font-weight: 500;
     }
 
-
     .info {
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 2em;
     }
   }
 
-
-
   .chart-container {
-    margin: 1rem;
-    width: 80px;
+    margin: 1em;
+    width: 5em;
     height: 80px;
   }
 }
