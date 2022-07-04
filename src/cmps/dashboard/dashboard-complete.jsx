@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css'
 export const DashboardComplete = ({ tasks }) => {
   const completeTasks = tasks.filter((task) => task.isComplete)
 
-  const percentOfComplete = parseInt((completeTasks.length / tasks.length) * 100)
+  const percentOfComplete = tasks.length ? parseInt((completeTasks.length / tasks.length) * 100) : 0
 
   return (
     <div className="dashboard-due-soon dashboard-side-item">

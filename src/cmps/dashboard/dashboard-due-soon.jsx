@@ -2,15 +2,17 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
 
 export const DashboardDueSoon = ({ tasks }) => {
-  const dueSoons = tasks.filter((task) => task.dueDate && Date.now() - task.dueDate < 1000 * 60 * 60 * 24)
+  const dueSoon = tasks.filter(
+    (task) => task.dueDate && !task.isComplete && Date.now() - task.dueDate < 1000 * 60 * 60 * 24
+  )
 
-  const percentOfComplete = parseInt((dueSoons.length / tasks.length) * 100)
+  const percentOfComplete = tasks.length ? parseInt((dueSoon.length / tasks.length) * 100) : 0
 
   return (
     <div className="dashboard-due-soon dashboard-side-item">
       <div className="text-container">
         <h1 className="title">Due soon</h1>
-        <h2 className="info">{dueSoons.length} Tasks</h2>
+        <h2 className="info">{dueSoon.length} Tasks</h2>
       </div>
       <div className="chart-container">
         <CircularProgressbar
