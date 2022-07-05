@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { useDebounce } from '../../hooks/useDebounce'
@@ -55,7 +55,6 @@ export const TaskFilter = ({ board }) => {
         />
         <p className="instructions">Look for tasks.</p>
       </section>
-
       {/* MEMBER */}
       <section className="by-member">
         <h2 className="member-label">Members</h2>
@@ -72,7 +71,7 @@ export const TaskFilter = ({ board }) => {
               {member.imgURL ? (
                 <img className="member-img" src={member.imgURL} alt={member.username} />
               ) : (
-                <Fragment>{`${utilService.getInitials(member)[0]}${utilService.getInitials(member)[1]}`}</Fragment>
+                <div className="user-initials">{utilService.getInitials(member.fullname)}</div>
               )}
             </div>
             <h3 className="member-name">{member.fullname}</h3>

@@ -19,9 +19,16 @@ export const TaskList = ({
   const [cardText, setCardText] = useState('')
   const { filterBy } = useSelector(({ boardModule }) => boardModule)
 
-  const handleChange = ({ target, nativeEvent }) => {
-    if (nativeEvent.inputType === 'insertLineBreak') return onAddCard()
+  const handleChange = ({ target }) => {
     setCardText(target.value)
+  }
+
+  const handleKeyDown = (ev) => {
+    if (ev.code === 'Enter') {
+      ev.preventDefault()
+      // if (!cardText) return
+      onAddCard()
+    }
   }
 
   const filter = (tasks) => {
@@ -87,6 +94,7 @@ export const TaskList = ({
                 onBlur={onAddCard}
                 placeholder="Enter a title for this card..."
                 onChange={handleChange}
+                onKeyDown={handleKeyDown}
                 value={cardText}
               ></textarea>
               <div className="btn-container">
@@ -94,8 +102,7 @@ export const TaskList = ({
                   Add card
                 </button>
                 <button className="x-btn" onClick={toggleAddCard}>
-                  {' '}
-                  <IoMdClose className="x-icon" />{' '}
+                  <IoMdClose className="x-icon" />
                 </button>
               </div>
             </div>

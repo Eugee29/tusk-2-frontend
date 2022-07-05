@@ -19,9 +19,16 @@ export const GroupPreview = ({ group, index, toggleLabels, board, isLabelsOpen, 
   const [titleText, setTitleText] = useState(group.title)
   const [isAddCardOpen, setIsAddCardOpen] = useState(false)
 
-  const handleChange = ({ target, nativeEvent }) => {
-    if (nativeEvent.inputType === 'insertLineBreak') return updateTitle()
+  const handleChange = ({ target }) => {
     setTitleText(target.value)
+  }
+
+  const handleKeyDown = (ev) => {
+    if (ev.code === 'Enter') {
+      ev.preventDefault()
+      if (!titleText) return
+      updateTitle()
+    }
   }
 
   const toggleAddCard = () => {
@@ -52,7 +59,7 @@ export const GroupPreview = ({ group, index, toggleLabels, board, isLabelsOpen, 
   }
 
   return (
-    // Setting each group to be draggable with the Draggable CMP
+    // Setting each group to be draggable with the Draggable component
     <Draggable draggableId={group.id} index={index} type="GROUP">
       {(provided, snapshot) => (
         <div ref={provided.innerRef} {...provided.draggableProps}>
@@ -63,6 +70,7 @@ export const GroupPreview = ({ group, index, toggleLabels, board, isLabelsOpen, 
                 ref={titleRef}
                 value={titleText}
                 onChange={handleChange}
+                onKeyDown={handleKeyDown}
                 onBlur={updateTitle}
                 onFocus={() => titleRef.current.select()}
                 spellCheck="false"

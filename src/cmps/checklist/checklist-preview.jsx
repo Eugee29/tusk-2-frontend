@@ -29,9 +29,16 @@ export const ChecklistPreview = ({ checklist, updateChecklist, checklists, updat
   const numOfChecked = checklist.todos.length - todosToShow.length
   const filteredChecklist = { ...checklist, todos: todosToShow }
 
-  const handleChange = ({ nativeEvent, target }) => {
-    if (nativeEvent.inputType === 'insertLineBreak') return onAddTodo()
+  const handleChange = ({ target }) => {
     setTodoTxt(target.value)
+  }
+
+  const handleKeyDown = (ev) => {
+    if (ev.code === 'Enter') {
+      ev.preventDefault()
+      if (!todoTxt) return
+      onAddTodo()
+    }
   }
 
   const onAddTodo = (ev) => {
@@ -146,6 +153,7 @@ export const ChecklistPreview = ({ checklist, updateChecklist, checklists, updat
               style={{ height: utilService.calcTextareaHeight(todoTxt, 56, 20) }}
               value={todoTxt}
               onChange={handleChange}
+              onKeyDown={handleKeyDown}
               onBlur={() => setIsAdding(false)}
               autoFocus
             ></textarea>

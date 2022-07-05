@@ -24,8 +24,8 @@ export const GroupList = ({ board, onUpdateBoard }) => {
 
   const onAddGroup = async (ev) => {
     if (ev) ev.preventDefault()
-    toggleIsAddGroupOpen()
     if (!newGroupTitle) return
+    toggleIsAddGroupOpen()
     const groupToAdd = await boardService.getEmptyGroup(newGroupTitle)
     addGroup(groupToAdd)
   }
