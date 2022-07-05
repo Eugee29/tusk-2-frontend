@@ -15,11 +15,8 @@ export const boardService = {
   getEmptyAttachment,
 }
 
-//Request (Rest:GET) all Data from Backend
-
 async function query(filterBy = {}) {
   try {
-    // return await httpService.get('board/', { params:  filterBy  })
     return await httpService.get('board/', { filterBy })
   } catch (err) {
     console.log('cant get boards!')
@@ -27,7 +24,6 @@ async function query(filterBy = {}) {
   }
 }
 
-// Request (Rest:GET) get a Bug from Backend
 async function getById(boardId) {
   try {
     return await httpService.get(`board/${boardId}`)
@@ -37,7 +33,6 @@ async function getById(boardId) {
   }
 }
 
-// Request (Rest:DELETE) delete a Bug from Backend
 async function remove(boardId) {
   try {
     return await httpService.delete(`board/${boardId}`)
@@ -47,16 +42,13 @@ async function remove(boardId) {
   }
 }
 
-// Request (Rest:PUT & POST) update or add new Bug from Backend
 async function save(board) {
   try {
     if (board._id) {
-      // console.log('Board updated...', board)
       socketService.emit('board-activity', board)
       const savedBoard = await httpService.put(`board/${board._id}`, board)
       return savedBoard
     } else {
-      console.log('board created', board)
       return await httpService.post(`board/`, board)
     }
   } catch (err) {
