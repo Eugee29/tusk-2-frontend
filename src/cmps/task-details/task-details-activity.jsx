@@ -5,6 +5,7 @@ import { activityService } from '../../services/activity.service'
 
 import { GrList } from 'react-icons/gr'
 import { ActivityList } from '../activity-list'
+import { utilService } from '../../services/util.service'
 
 export function TaskDetailsActivity({ task, isCloseEdit, board, onUpdateBoard, group }) {
   const activities = activityService.getTaskActivities(task.id, board)
@@ -63,7 +64,11 @@ export function TaskDetailsActivity({ task, isCloseEdit, board, onUpdateBoard, g
       <div className="activity-list-container">
         <div className="user-container">
           <div className="member">
-            <img src={user.imgURL} alt="..." />
+            {user.imgURL ? (
+              <img src={user.imgURL} alt="user" />
+            ) : (
+              <div className="user-initials">{utilService.getInitials(user.fullname)}</div>
+            )}
           </div>
         </div>
 

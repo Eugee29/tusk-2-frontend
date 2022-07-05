@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 
 import { BsCheck2 } from 'react-icons/bs'
-import de from 'date-fns/esm/locale/de/index.js'
+import { utilService } from '../../services/util.service'
 
 export const ModalMember = ({ task, board, updateTask }) => {
   const [searchMember, setSearchMember] = useState('')
@@ -12,8 +12,6 @@ export const ModalMember = ({ task, board, updateTask }) => {
 
   if (!task) return
   if (!board) return
-
-  const initials = (member) => [...member.fullname]
 
   const onToggle = (id) => {
     const taskMemberIdx = taskMembers.findIndex((taskMember) => taskMember._id === id)
@@ -58,6 +56,7 @@ export const ModalMember = ({ task, board, updateTask }) => {
             filterMembers?.map((member, idx) =>
               member?.imgURL ? (
                 <li key={member._id} onClick={() => onToggle(member._id)}>
+                  {/* eslint-disable-next-line */}
                   <a className="member-list">
                     <span className="member-img" style={{ backgroundImage: `url('${member.imgURL}')` }}></span>
                     <span className="member-txt">{`${member.fullname} (${
@@ -72,8 +71,9 @@ export const ModalMember = ({ task, board, updateTask }) => {
                 </li>
               ) : (
                 <li key={member._id} onClick={() => onToggle(member._id)}>
+                  {/* eslint-disable-next-line */}
                   <a className="member-list">
-                    <span className="member">{`${initials(member)[0]}${initials(member)[1]}`}</span>
+                    <span className="member">{utilService.getInitials(member.fullname)}</span>
                     <span className="member-txt">{`${member.fullname} (${
                       member.username.match(/^([^@]*)@/)[1]
                     })`}</span>

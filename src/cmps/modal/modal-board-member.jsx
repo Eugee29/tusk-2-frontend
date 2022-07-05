@@ -1,21 +1,18 @@
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { BsCheck2 } from 'react-icons/bs'
 
-import { setModal } from '../../store/app/app.actions'
+import { utilService } from '../../services/util.service'
 
 export const ModalBoardMember = ({ element, task, updateTask, board, onUpdateBoard, deleteMemberFromBoard }) => {
   const { users } = useSelector(({ userModule }) => userModule)
   const [searchMember, setSearchMember] = useState('')
   const [filterUsers, setFilterUsers] = useState(users)
   const [updatedBoard, setBoardMembers] = useState(board)
-  const dispatch = useDispatch()
 
   if (!board) return
   if (!users) return
-
-  const initials = (member) => [...member.fullname]
 
   const onToggle = (id) => {
     const boardMemberIdx = updatedBoard.members.findIndex((member) => member._id === id)
@@ -64,6 +61,7 @@ export const ModalBoardMember = ({ element, task, updateTask, board, onUpdateBoa
                     deleteMemberFromBoard(user._id)
                   }}
                 >
+                  {/* eslint-disable-next-line */}
                   <a className="member-list">
                     <span className="member-img" style={{ backgroundImage: `url('${user.imgURL}')` }}></span>
                     <span className="member-txt">{`${user.fullname} (${user.username.match(/^([^@]*)@/)[1]})`}</span>
@@ -82,8 +80,9 @@ export const ModalBoardMember = ({ element, task, updateTask, board, onUpdateBoa
                     deleteMemberFromBoard(user._id)
                   }}
                 >
+                  {/* eslint-disable-next-line */}
                   <a className="member-list">
-                    <span className="member">{`${initials(user)[0]}${initials(user)[1]}`}</span>
+                    <span className="member">{utilService.getInitials(user.fullname)}</span>
                     <span className="member-txt">{`${user.fullname} (${user.username.match(/^([^@]*)@/)[1]})`}</span>
                     {updatedBoard.members && updatedBoard.members.some((boardMember) => boardMember._id === user._id) && (
                       <span className="member-icon">

@@ -16,15 +16,13 @@ export function ActivityList(props) {
         <div className="activity" key={activity.id}>
           {activity.byMember.imgURL ? (
             <div>
-              {' '}
-              <img className="member-img" src={activity.byMember.imgURL} alt="..." />{' '}
+              <img className="member-img" src={activity.byMember.imgURL} alt="..." />
             </div>
           ) : (
-            <div className="member-img"> G </div>
+            <div className="member-img user-initials ">{utilService.getInitials(activity.byMember.fullname)}</div>
           )}
           <div className="activity-info" key={activity.id}>
             <h3 className="activity-text">
-              {' '}
               <span className="fullname">{activity.byMember.fullname}&nbsp;</span>
               {activity.isComment && (
                 <span className="activity-time"> {utilService.getTimeAgo(activity.createdAt)} </span>

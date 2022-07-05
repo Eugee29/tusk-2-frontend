@@ -32,7 +32,6 @@ export const AppHeader = () => {
   if (pathname === '/login' || pathname === '/signup') return
 
   const isBoard = pathname.includes('/board')
-  const initials = (user) => [...user.fullname]
 
   const getClassName = () => {
     let className
@@ -121,7 +120,7 @@ export const AppHeader = () => {
             (user?.imgURL ? (
               <span className="user-img" style={{ backgroundImage: `url('${user.imgURL}')` }}></span>
             ) : (
-              <span className="user-initial">{`${initials(user)[0]}${initials(user)[1]}`}</span>
+              <span className="user-initial">{utilService.getInitials(user.fullname)}</span>
             ))}
           {!user && <span className="user-initial"></span>}
         </div>

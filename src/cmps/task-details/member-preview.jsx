@@ -1,13 +1,12 @@
 import { Fragment, useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import { utilService } from '../../services/util.service'
 
 import { setModal } from '../../store/app/app.actions'
 
 export const MemberPreview = ({ member, task, board, onUpdateBoard, isInTaskDetails }) => {
   const dispatch = useDispatch()
   const memberRef = useRef()
-
-  const initials = (member) => [...member.fullname]
 
   const onOpenModal = (ev, modal) => {
     ev.stopPropagation()
@@ -44,7 +43,7 @@ export const MemberPreview = ({ member, task, board, onUpdateBoard, isInTaskDeta
             })
           }
         >
-          {`${initials(member)[0]}${initials(member)[1]}`}
+          {utilService.getInitials(member.fullname)}
         </a>
       )}
     </Fragment>

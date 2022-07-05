@@ -25,7 +25,7 @@ export const BoardDetails = () => {
     socketService.emit('listen-to-board', params.boardId)
     socketService.on('board-activity', loadBoard)
     return () => {
-      socketService.emit('leave-board', params.boardId)
+      // socketService.emit('leave-board', params.boardId)
       socketService.off('board-activity', loadBoard)
     }
     // eslint-disable-next-line

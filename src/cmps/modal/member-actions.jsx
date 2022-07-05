@@ -3,11 +3,10 @@ import { useDispatch } from 'react-redux'
 import { setModal } from '../../store/app/app.actions'
 
 import { CgClose } from 'react-icons/cg'
+import { utilService } from '../../services/util.service'
 
 export const MemberActions = ({ member, task, board, onUpdateBoard }) => {
   const dispatch = useDispatch()
-
-  const initials = (member) => [...member.fullname]
 
   const onRemoveMember = () => {
     dispatch(setModal(null))
@@ -30,7 +29,7 @@ export const MemberActions = ({ member, task, board, onUpdateBoard }) => {
             <img src={member.imgURL} alt={member.fullName} className="member-img" />
           ) : (
             // eslint-disable-next-line
-            <a className="member">{`${initials(member)[0]}${initials(member)[1]}`}</a>
+            <a className="member">{utilService.getInitials(member.fullname)}</a>
           )}
         </div>
 

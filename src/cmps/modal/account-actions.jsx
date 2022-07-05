@@ -4,12 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { onLogout } from '../../store/user/user.action'
 import { setModal } from '../../store/app/app.actions'
 import { Fragment } from 'react'
+import { utilService } from '../../services/util.service'
 
 export const AccountActions = ({ user }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-
-  const initials = (user) => [...user.fullname]
 
   const logoutUser = () => {
     dispatch(onLogout())
@@ -30,7 +29,7 @@ export const AccountActions = ({ user }) => {
             <img src={user.imgURL} alt={user.fullName} className="account-img" />
           ) : (
             // eslint-disable-next-line
-            <a className="account">{`${initials(user)[0]}${initials(user)[1]}`}</a>
+            <a className="account">{utilService.getInitials(user.fullname)}</a>
           )}
         </div>
         <div className="credentials">
