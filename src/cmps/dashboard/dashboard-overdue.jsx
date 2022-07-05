@@ -3,7 +3,6 @@ import 'react-circular-progressbar/dist/styles.css'
 
 export const DashboardOverdue = ({ tasks }) => {
   const overdue = tasks.filter((task) => task.dueDate && !task.isComplete && Date.now() - task.dueDate > 0)
-  console.log(overdue)
 
   const percentOfComplete = tasks.length ? parseInt((overdue.length / tasks.length) * 100) : 0
 

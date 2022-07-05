@@ -78,7 +78,8 @@ export const AttachmentPreview = ({ attachment, task, updateTask }) => {
           <span className="thumbnail-date">
             Added <span className="date">{timeAgo(attachment.createdAt)}</span>
           </span>
-          <span>
+          {/* <div className="att-controls"> */}
+          <span className="att-control">
             {/* eslint-disable-next-line */}
             <a
               className="thumbnail-date"
@@ -95,7 +96,7 @@ export const AttachmentPreview = ({ attachment, task, updateTask }) => {
               <span className="button-att">Delete</span>
             </a>
           </span>
-          <span>
+          <span className="att-control">
             {/* eslint-disable-next-line */}
             <a
               className="thumbnail-date"
@@ -112,6 +113,7 @@ export const AttachmentPreview = ({ attachment, task, updateTask }) => {
               <span className="button-att">Edit</span>
             </a>
           </span>
+          {/* </div> */}
         </div>
         <div className="thumbnail-cover">
           <span className="icon-make-cover">
