@@ -32,13 +32,12 @@ export const TaskList = ({
   }
 
   const filter = (tasks) => {
-    const regEx = new RegExp(filterBy.keyword, 'i')
     return tasks.filter(
       (task) =>
         !task.archivedAt &&
         (!filterBy.labelIds.length || task.labelIds.some((label) => filterBy.labelIds.includes(label))) &&
         (!filterBy.memberIds.length || task.members.some((member) => filterBy.memberIds.includes(member._id))) &&
-        regEx.test(task.title)
+        task.title.toLowerCase().includes(filterBy.keyword.toLowerCase())
     )
   }
 
