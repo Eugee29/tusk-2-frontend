@@ -24,13 +24,11 @@ export function ChangeBackgroundList({ board, onUpdateBoard }) {
 
   const onPickColor = (color) => {
     const style = { bgImg: color }
-    console.log({ ...board, style: style })
     onUpdateBoard({ ...board, style: style })
   }
 
   const onPickImg = (url) => {
     const style = { bgImg: url }
-    console.log({ ...board, style: style })
     onUpdateBoard({ ...board, style: style })
   }
 
@@ -43,7 +41,6 @@ export function ChangeBackgroundList({ board, onUpdateBoard }) {
     const miniRes = result.map((img) => img.urls)
     setRes(miniRes)
     unsplash.current = miniRes
-    console.log(miniRes)
   }
 
   const onSubmit = (ev) => {

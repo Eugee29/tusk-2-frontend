@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const uploadService = {
-  uploadImg
+  uploadImg,
 }
 async function uploadImg(ev) {
   const CLOUD_NAME = 'tusk'

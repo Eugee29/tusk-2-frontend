@@ -1,10 +1,8 @@
 .dynamic-modal {
-
   float: right;
   background-color: #ffffff;
   min-width: 190px;
   width: 304px;
-
 
   position: fixed;
   left: -1000px;
@@ -20,8 +18,6 @@
     width: 584px;
   }
 
-
-
   header {
     margin-bottom: 8px;
     padding: 0 12px;
@@ -32,7 +28,8 @@
 
     .label {
       color: #172b4d;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
       font-size: 14px;
       line-height: 20px;
       font-weight: 400;
@@ -113,6 +110,4 @@
     overflow-y: auto;
     padding: 0 12px 12px;
   }
-
-
 }

@@ -25,7 +25,6 @@
 }
 
 .create-board-background {
-
   .label {
     @include task-sub-header();
     margin-top: 16px;
@@ -64,13 +63,11 @@
         filter: saturate(60%) brightness(60%);
 
         &::after {
-          content: "✓";
+          content: '✓';
           color: white;
-
         }
       }
     }
-
   }
 
   .color-container {
@@ -101,9 +98,8 @@
         filter: saturate(60%) brightness(60%);
 
         &::after {
-          content: "✓";
+          content: '✓';
           color: white;
-
         }
       }
     }
@@ -152,7 +148,6 @@
         background-color: #ebecf0;
       }
     }
-
   }
 
   .title-msg {
@@ -171,7 +166,6 @@
       line-height: 20px;
       font-weight: 400;
     }
-
   }
 
   .cover-btn {
@@ -183,7 +177,6 @@
     color: #a5adba;
     cursor: not-allowed;
     justify-content: center;
-
 
     &.allowed {
       background-color: #0079bf;
@@ -198,8 +191,6 @@
         border: none;
         color: #ffffff;
       }
-
     }
-
   }
 }

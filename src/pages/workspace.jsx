@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
-// import { useDispatch } from 'react-redux'
 
 import { BoardList } from '../cmps/board/board-list.jsx'
 import { boardService } from '../services/board.service.js'
-// import { /*loadBoards,*/ updateBoard } from '../store/board/board.action.js'
 
 export const Workspace = () => {
   const [boards, setBoards] = useState(null)
-  // const dispatch = useDispatch()
 
   useEffect(() => {
     loadBoards()
-    // loadBoardsAsync()
     // eslint-disable-next-line
   }, [])
 
@@ -19,11 +15,6 @@ export const Workspace = () => {
     const boards = await boardService.query()
     setBoards(boards)
   }
-
-  // const loadBoardsAsync = async () => {
-  //   const boardsFromService = await dispatch(loadBoards())
-  //   setBoards(boardsFromService)
-  // }
 
   const onUpdateBoard = async (updatedBoard) => {
     await boardService.save(updatedBoard)

@@ -50,7 +50,11 @@ export const TaskDetailsDescription = ({ task, updateTask }) => {
         {/* eslint-disable-next-line */}
         {!isClickedDesc && !task.description && <a onClick={onChangeDesc}>Add a more detailed description…</a>}
         {/* eslint-disable-next-line */}
-        {!isClickedDesc && task.description && <a onClick={onChangeDesc}>{task.description}</a>}
+        {!isClickedDesc && task.description && (
+          <pre className="desc-body" onClick={onChangeDesc}>
+            {task.description}
+          </pre>
+        )}
 
         {isClickedDesc && !task.description && (
           <textarea

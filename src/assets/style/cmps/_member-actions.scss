@@ -28,7 +28,7 @@
   .member-info {
     display: flex;
     width: 304px;
-    padding: 1.5rem rem(12px) .5rem rem(14px);
+    padding: 1.5rem rem(12px) 0.5rem rem(14px);
     margin: 0 -12px;
     background-image: linear-gradient(to bottom, $brand-clr2 0%, $brand-clr2 100%);
     background-repeat: no-repeat;
@@ -55,14 +55,12 @@
         height: 100%;
         border-radius: 50%;
         border: 1px solid white;
-
-
       }
     }
 
     .member-name {
-      margin-left: .5rem;
-      margin-top: .5rem;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
       line-height: rem(20px);
       color: $font-clr1;
       text-overflow: ellipsis;
@@ -81,6 +79,6 @@
   }
 
   .remove-btn {
-    @include modal-main-btn
+    @include modal-main-btn;
   }
 }

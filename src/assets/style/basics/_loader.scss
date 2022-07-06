@@ -4,11 +4,6 @@ $bar-width: ceil($size / 5);
 $gutter-width: floor(($size - $bar-width * 3) / 2);
 $bar-color: #172b4d;
 
-// body {
-//    background-color: #333 // Just for presentation
-// }
-
-
 .icon-bars {
   width: 50px;
   height: 50px;
@@ -29,17 +24,15 @@ $bar-color: #172b4d;
     animation: up-down $speed infinite;
 
     &.board {
-      background-color: rgba(0, 0, 0, .45);
+      background-color: rgba(0, 0, 0, 0.45);
     }
 
     &:nth-child(2) {
-
       left: $bar-width + $gutter-width;
       animation-delay: -$speed / 3 * 2;
     }
 
     &:nth-child(3) {
-
       left: $bar-width * 2 + $gutter-width * 2;
       animation-delay: -$speed / 3;
     }
@@ -47,19 +40,15 @@ $bar-color: #172b4d;
 }
 
 @keyframes up-down {
-
   from {
-
-    top: $size
+    top: $size;
   }
 
   50% {
-
-    bottom: 0
+    bottom: 0;
   }
 
   to {
-
-    bottom: $size
+    bottom: $size;
   }
 }

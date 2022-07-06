@@ -5,7 +5,6 @@
 
   100% {
     right: 0%;
-
   }
 }
 
@@ -21,13 +20,11 @@
 
 .side-menu {
   position: absolute;
-  // right: -339px;
   top: 44px;
   width: 339px;
   right: -339px;
   padding: 0px 4px 5px 4px;
   height: calc(100vh - 44px);
-  // background-color: lighten($brand-clr8, 5%);
   background-color: #f2f3f6;
   z-index: 10000;
   box-shadow: 0 8px 16px -4px #091e4240, 0 0 0 1px #091e4214;
@@ -66,7 +63,6 @@
     animation-play-state: running;
     animation-fill-mode: forwards;
   }
-
 
   .activities {
     padding-top: 8px;
@@ -144,7 +140,6 @@
         color: #172b4d;
       }
     }
-
   }
 
   .x-btn {
@@ -159,7 +154,7 @@
     color: lighten($font-clr3, 5%);
 
     &:hover {
-      color: darken($font-clr3, 20%)
+      color: darken($font-clr3, 20%);
     }
 
     .x-icon {
@@ -167,10 +162,4 @@
       width: 26px;
     }
   }
-
-
-
-
-
-
 }

@@ -41,10 +41,7 @@ export function BoardSideMenu({ onToggleMenu, dynamicClass, board, onUpdateBoard
         <h3 className="activity-title-text">Archived items</h3>
       </div>
       {isArchivedOpen && <ArchivedList board={board} onUpdateBoard={onUpdateBoard} />}
-
-      {/* <div className="line-break"></div> */}
       <hr />
-
       <div className="activity-title-container hover" onClick={onToggleBackground}>
         <span className="">
           <BsImage />
@@ -52,11 +49,7 @@ export function BoardSideMenu({ onToggleMenu, dynamicClass, board, onUpdateBoard
         <h3 className="activity-title-text">Change background</h3>
       </div>
       {isBackgroundOpen && <ChangeBackgroundList board={board} onUpdateBoard={onUpdateBoard} />}
-
-      {/* <div className="line-break"></div> */}
-
       <hr />
-
       <div className="activity-title-container">
         <span className="">
           <GrList />

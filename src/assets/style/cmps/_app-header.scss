@@ -37,8 +37,8 @@
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     border-radius: 3px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
     font-size: 14px;
     margin-left: 7px;
 
@@ -128,7 +128,6 @@
 
   &.board {
     height: rem(44px);
-    // background-color: $brand-clr1;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     padding: rem(6px) rem(4px);
@@ -192,7 +191,7 @@
         background-repeat: round;
         background: center;
         background-size: cover;
-        margin:0;
+        margin: 0;
         margin-right: 4px;
         object-fit: cover;
         max-width: 100%;
@@ -207,7 +206,7 @@
     align-items: center;
     height: rem(68.25px);
     padding: 1rem;
-    transition: .2s;
+    transition: 0.2s;
 
     .logo-container {
       width: rem(126px);

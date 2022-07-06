@@ -1,8 +1,6 @@
 .size-section {
-  // width: 280px;
-
   .label {
-    @include task-sub-header()
+    @include task-sub-header();
   }
 
   .box-container {
@@ -16,7 +14,7 @@
     .box-half {
       height: 62px;
       cursor: pointer;
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 3px;
       position: relative;
       border: unset;
@@ -30,7 +28,6 @@
         background-size: cover;
         height: 28px;
         border-radius: 3px 3px 0 0;
-
       }
 
       .lines {
@@ -38,14 +35,14 @@
         position: relative;
 
         .lines_1 {
-          background: #6B778C;
+          background: #6b778c;
           height: 4px;
           border-radius: 2px;
           width: 122px;
         }
 
         .lines_2 {
-          background: #6B778C;
+          background: #6b778c;
           height: 4px;
           border-radius: 2px;
           width: 98px;
@@ -60,7 +57,7 @@
           .lines_3_2 {
             width: 16px;
             height: 6px;
-            background: #6B778C;
+            background: #6b778c;
             border-radius: 2px;
             margin-right: 2px;
           }
@@ -72,17 +69,16 @@
           height: 10px;
           right: 4px;
           bottom: 4px;
-          background: #6B778C;
+          background: #6b778c;
           border-radius: 5px;
         }
       }
-
     }
 
     .box-full {
       height: 62px;
       cursor: pointer;
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 3px;
       position: relative;
       background-size: cover;
@@ -100,21 +96,20 @@
         padding: 6px 4px 4px 6px;
 
         .lines_1 {
-          background: #6B778C;
+          background: #6b778c;
           width: 116px;
           height: 4px;
           border-radius: 2px;
         }
 
         .lines_2 {
-          background: #6B778C;
+          background: #6b778c;
           width: 92px;
           margin-top: 4px;
           height: 4px;
           border-radius: 2px;
         }
       }
-
     }
 
     :hover {
@@ -131,7 +126,7 @@
 
 .textcolor-section {
   .label {
-    @include task-sub-header()
+    @include task-sub-header();
   }
 
   .box-container {
@@ -145,7 +140,7 @@
     .box-full {
       height: 20px;
       cursor: pointer;
-      background: #FFFFFF;
+      background: #ffffff;
       position: relative;
       background-size: cover;
       background-position: center;
@@ -160,9 +155,8 @@
         filter: none;
       }
 
-
       h3 {
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 0;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -181,11 +175,9 @@
       filter: saturate(85%) brightness(85%);
     }
   }
-
 }
 
 .colors-section {
-
   .label {
     @include task-sub-header();
     margin-top: 16px;
@@ -213,7 +205,7 @@
       width: 50px;
       height: 32px;
       cursor: pointer;
-      background-color: #7BC86C;
+      background-color: #7bc86c;
       border: none;
 
       &:hover {
@@ -229,7 +221,6 @@
 }
 
 .attachments-section {
-
   .label {
     @include task-sub-header();
     margin-top: 16px;
@@ -271,7 +262,6 @@
       box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5ba4cf;
       filter: none;
     }
-
   }
 
   .cover-btn {
@@ -280,7 +270,7 @@
     text-align: center;
   }
 
-  input[type="file"] {
+  input[type='file'] {
     display: none;
   }
 
@@ -289,12 +279,11 @@
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
-    display: block
+    display: block;
   }
 }
 
 .unsplash-section {
-
   .label {
     @include task-sub-header();
     margin-top: 16px;
@@ -335,7 +324,6 @@
       box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
       filter: none;
     }
-
   }
 
   .cover-btn {

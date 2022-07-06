@@ -38,10 +38,6 @@ export function TaskDetailsCover({ task, updateTask }) {
     setIsFullScreen(false)
   }
 
-  // const onGoBack = () => {
-  //   setIsFullScreen(false)
-  // }
-
   const onModal = (category) => {
     dispatch(
       setModal({

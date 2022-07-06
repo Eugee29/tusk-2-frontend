@@ -45,9 +45,6 @@ export const Dashboard = () => {
           <div className="main-chart-container">
             <DashboardChart tasks={tasks} board={board} />
           </div>
-
-          {/* <div className="tasks-per-label-container grid-item"></div>
-        <div className="tasks-per-member-container grid-item"></div> */}
         </section>
       </main>
     </div>

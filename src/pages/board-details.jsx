@@ -6,7 +6,6 @@ import { boardService } from '../services/board.service.js'
 import { activityService } from '../services/activity.service.js'
 import { socketService } from '../services/socket.service.js'
 
-// import { updateBoard } from '../store/board/board.action.js'
 import { loadUsers } from '../store/user/user.action.js'
 
 import { BoardHeader } from '../cmps/board/board-header.jsx'
@@ -14,7 +13,6 @@ import { GroupList } from '../cmps/group/group-list.jsx'
 
 export const BoardDetails = () => {
   const [board, setBoard] = useState(null)
-  // const [users, setUsers] = useState(null)
   const params = useParams()
   const dispatch = useDispatch()
   const { user } = useSelector(({ userModule }) => userModule)
@@ -25,7 +23,6 @@ export const BoardDetails = () => {
     socketService.emit('listen-to-board', params.boardId)
     socketService.on('board-activity', loadBoard)
     return () => {
-      // socketService.emit('leave-board', params.boardId)
       socketService.off('board-activity', loadBoard)
     }
     // eslint-disable-next-line
@@ -35,10 +32,6 @@ export const BoardDetails = () => {
     if (!updatedBoard) updatedBoard = await boardService.getById(params.boardId)
     setBoard(updatedBoard)
   }
-
-  // const loadUsersAsync = async () => {
-  //   if (!users) setUsers(await dispatch(loadUsers()))
-  // }
 
   const onUpdateBoard = async (updatedBoard, activity) => {
     if (activity) updatedBoard = addActivity(updatedBoard, activity)

@@ -2,7 +2,7 @@
   width: 280px;
 
   .input-label {
-    @include modal-label
+    @include modal-label;
   }
 
   .link-input {

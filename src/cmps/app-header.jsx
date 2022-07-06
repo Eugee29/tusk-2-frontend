@@ -78,8 +78,6 @@ export const AppHeader = () => {
             Workspaces
           </Link>
         )}
-        {/* {!isHome && <div className='workspace-link' >Recent <FiChevronDown /></div>}
-        {!isHome && <div className='workspace-link' >Starred <FiChevronDown /></div>} */}
         {!isHome && (
           <div
             className="workspace-create"

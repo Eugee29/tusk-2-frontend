@@ -11,8 +11,6 @@
   margin-top: 44px;
   position: static;
 
-
-
   .left-container {
     margin-left: 6px;
     line-height: 20px;
@@ -57,7 +55,8 @@
     .dashboard-btn {
       color: #ffff;
       font-size: 14px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
       text-overflow: ellipsis;
       display: flex;
       justify-content: space-around;
@@ -65,7 +64,6 @@
       gap: 6px;
       height: 32px;
       padding: rem(6px) rem(12px);
-
 
       .filter-icon-container {
         height: 100%;
@@ -81,7 +79,6 @@
       &:hover {
         background-color: rgba(255, 255, 255, 0.415);
       }
-
     }
   }
 
@@ -106,9 +103,8 @@
     }
 
     &.full {
-
       &:hover .star-icon {
-        color: #ffff
+        color: #ffff;
       }
 
       .star-icon {
@@ -125,13 +121,10 @@
         color: #ffff;
       }
     }
-
   }
 
   .member-img-container {
-
     .members-add-button {
-      // @include task-add-button();
       width: 32px;
       height: 32px;
       border-radius: 3px;
@@ -147,9 +140,7 @@
       &:hover {
         background-color: rgba(255, 255, 255, 0.415);
       }
-
     }
-
 
     &.round {
       border-radius: 100%;
@@ -160,7 +151,6 @@
       margin-bottom: 0px;
       margin-right: -5px;
     }
-
 
     img {
       cursor: pointer;
@@ -184,9 +174,8 @@
     }
 
     &.full {
-
       &:hover .star-icon {
-        color: #ffff
+        color: #ffff;
       }
 
       .star-icon {
@@ -203,13 +192,10 @@
         color: #ffff;
       }
     }
-
   }
 
   .member-img-container {
-
     .members-add-button {
-      // @include task-add-button();
       background-color: rgba(255, 255, 255, 0.325);
       margin: 0px;
       margin-right: 4px;
@@ -232,8 +218,6 @@
         opacity: 1;
       }
     }
-
-
   }
 
   @media (min-width: 510px) {
@@ -248,16 +232,15 @@
 
       &::after {
         padding-bottom: 3px;
-        content: "Show menu";
+        content: 'Show menu';
         padding-right: 3px;
       }
     }
 
     .filter-btn {
-
       &::after {
         padding-bottom: 3px;
-        content: "Filter";
+        content: 'Filter';
         padding-right: 3px;
       }
     }
@@ -271,17 +254,11 @@
     }
 
     .dashboard-btn {
-
       &::after {
         padding-bottom: 3px;
-        content: "Dashboard";
+        content: 'Dashboard';
         padding-right: 3px;
       }
     }
-
   }
-
-
-
-
 }

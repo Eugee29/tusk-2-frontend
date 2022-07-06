@@ -2,7 +2,7 @@
   width: 280px;
 
   label {
-    @include modal-label
+    @include modal-label;
   }
 
   input {
@@ -10,7 +10,7 @@
   }
 
   button {
-    margin-top: .5rem;
-    margin-right: .25rem;
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
   }
 }

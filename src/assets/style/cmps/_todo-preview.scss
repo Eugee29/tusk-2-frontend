@@ -48,7 +48,6 @@
       align-self: start;
     }
 
-
     &.edit {
       .controls {
         display: flex;
@@ -87,7 +86,7 @@
             color: $font-clr1;
             margin: 0;
             margin-inline-end: 4px;
-            transition: background-color .085s;
+            transition: background-color 0.085s;
 
             &:hover {
               background-color: $brand-clr1;
@@ -143,8 +142,6 @@
         width: 100%;
         color: $clr3;
       }
-
-
     }
 
     .btn-container {

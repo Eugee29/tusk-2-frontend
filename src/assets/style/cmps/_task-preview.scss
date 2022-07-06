@@ -7,8 +7,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  // padding-bottom: 8px;
-  padding: rem(6px) .5rem rem(2px);
+  padding: rem(6px) 0.5rem rem(2px);
   border-radius: 3px;
   cursor: pointer;
   margin-bottom: 8px;
@@ -27,7 +26,6 @@
     float: right;
     height: 2rem;
     margin-right: -2px;
-    // margin: 0 -2px 5px 0;
 
     .member {
       @include task-member-button(tomato);
@@ -65,7 +63,6 @@
   }
 
   .task-icon-container {
-    // display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -76,10 +73,7 @@
       align-items: center;
       gap: 10px;
       color: $font-clr3;
-      // margin-top: 10px;
-      // margin-left: -2px;
       margin: 0 4px 4px 0;
-
     }
 
     .icon-num-container {
@@ -98,8 +92,6 @@
       padding: 0px 4px;
 
       span {
-        // display: flex;
-        // align-items: center;
         height: 50%;
       }
     }
@@ -130,8 +122,7 @@
     padding: 0;
 
     .task-info {
-      padding: rem(6px) .5rem rem(2px);
-
+      padding: rem(6px) 0.5rem rem(2px);
     }
 
     img {
@@ -178,8 +169,6 @@
       display: flex;
       align-items: flex-end;
     }
-
-
   }
 
   .task-title-container {

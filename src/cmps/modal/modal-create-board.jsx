@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { setModal } from '../../store/app/app.actions'
 
 import { boardService } from '../../services/board.service'
-// import { addBoard } from '../../store/board/board.action.js'
 
 import { ReactComponent as PreviewBoard } from '../../assets/imgs/preview-board.svg'
 
@@ -54,7 +53,6 @@ export const ModalCreateBoard = () => {
       username: user.username,
       imgURL: user.imgURL,
     })
-    // const newBoard = await dispatch(addBoard(board))
     const newBoard = await boardService.save(board)
     dispatch(setModal(null))
     navigate(`/board/${newBoard._id}`)

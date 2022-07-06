@@ -287,7 +287,6 @@ export const ModalCover = ({ task, updateTask }) => {
             }}
           ></button>
         </div>
-        {/* <span className="cover-btn">Search for photos</span> */}
       </div>
     </React.Fragment>
   )

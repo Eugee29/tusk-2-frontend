@@ -35,7 +35,7 @@ export function onSignup(credentials) {
       })
       return user
     } catch (err) {
-      console.log('Cannot signup', err)
+      throw err
     }
   }
 }
@@ -49,7 +49,7 @@ export function onLogout() {
         user: null,
       })
     } catch (err) {
-      console.log('Cannot logout', err)
+      throw err
     }
   }
 }

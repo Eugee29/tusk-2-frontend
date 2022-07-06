@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 
-// import { FaLinkedin } from 'react-icons/bs'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 import hero from '../assets/imgs/hero.png'

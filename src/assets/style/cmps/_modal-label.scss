@@ -21,7 +21,8 @@
       transition-property: background-color, border-color, box-shadow;
       transition-timing-function: ease;
       color: #172b4d;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+        sans-serif;
       font-size: 14px;
       font-weight: 400;
 
@@ -63,7 +64,6 @@
       padding: 0;
       margin-bottom: 8px;
 
-
       li {
         padding-right: 36px;
         position: relative;
@@ -88,10 +88,6 @@
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-
-          // &:hover {
-          //    background-color: rgba(169, 176, 188, 0.078);
-          // }
 
           span {
             color: #fff;
@@ -129,9 +125,7 @@
             }
           }
         }
-
       }
     }
   }
-
 }

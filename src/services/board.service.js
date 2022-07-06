@@ -19,7 +19,6 @@ async function query(filterBy = {}) {
   try {
     return await httpService.get('board/', { filterBy })
   } catch (err) {
-    console.log('cant get boards!')
     throw err
   }
 }
@@ -28,7 +27,6 @@ async function getById(boardId) {
   try {
     return await httpService.get(`board/${boardId}`)
   } catch (err) {
-    console.log('cant get board by id!')
     throw err
   }
 }
@@ -37,7 +35,6 @@ async function remove(boardId) {
   try {
     return await httpService.delete(`board/${boardId}`)
   } catch (err) {
-    console.log('cant delete board')
     throw err
   }
 }
@@ -52,7 +49,6 @@ async function save(board) {
       return await httpService.post(`board/`, board)
     }
   } catch (err) {
-    console.log('cant save board')
     throw err
   }
 }
