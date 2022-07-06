@@ -11,17 +11,6 @@ export function loadUsers() {
   }
 }
 
-// export function removeUser(userId) {
-//   return async (dispatch) => {
-//     try {
-//       await userService.remove(userId)
-//       dispatch({ type: 'REMOVE_USER', userId })
-//     } catch (err) {
-//       console.log('UserActions: err in removeUser', err)
-//     }
-//   }
-// }
-
 export function onLogin(credentials) {
   return async (dispatch) => {
     try {
@@ -64,14 +53,3 @@ export function onLogout() {
     }
   }
 }
-
-// export function loadUser(userId) {
-//   return async (dispatch) => {
-//     try {
-//       const user = await userService.getById(userId)
-//       dispatch({ type: 'SET_WATCHED_USER', user })
-//     } catch (err) {
-//       console.log('Cannot load user', err)
-//     }
-//   }
-// }

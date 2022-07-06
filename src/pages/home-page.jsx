@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 
+// import { FaLinkedin } from 'react-icons/bs'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+
 import hero from '../assets/imgs/hero.png'
 import demo from '../assets/imgs/demo.jpg'
 
@@ -37,9 +40,59 @@ export const HomePage = () => {
           </div>
         </section>
         <footer className="home-page-footer">
-          <h3>Uri Gruda</h3>
-          <h3>Eran Avichzer</h3>
-          <h3>Tal Ofer</h3>
+          <div className="credit">
+            <h3 className="name">Uri Gruda</h3>
+            <div className="icons-wrapper">
+              <a
+                href="https://www.linkedin.com/in/uri-gruda-70b36b22b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <FaLinkedin />
+              </a>
+              <a href="https://github.com/Eugee29" target="_blank" rel="noopener noreferrer" className="icon-container">
+                <FaGithubSquare />
+              </a>
+            </div>
+          </div>
+          <div className="credit">
+            <h3 className="name">Eran Avichzer</h3>
+            <div className="icons-wrapper">
+              <a
+                href="https://www.linkedin.com/in/eran-avichzer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <FaLinkedin />
+              </a>
+              <a href="https://github.com/EranAAA" target="_blank" rel="noopener noreferrer" className="icon-container">
+                <FaGithubSquare />
+              </a>
+            </div>
+          </div>
+          <div className="credit">
+            <h3 className="name">Tal Ofer</h3>
+            <div className="icons-wrapper">
+              <a
+                href="https://www.linkedin.com/in/tal-ofer-9408b9242/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/TalAOfer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-container"
+              >
+                <FaGithubSquare />
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     </main>

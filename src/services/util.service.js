@@ -1,13 +1,13 @@
 export const utilService = {
   makeId,
-  makeLorem,
-  getRandomIntInclusive,
-  delay,
+  // makeLorem,
+  // getRandomIntInclusive,
+  // delay,
   formatTimeToDM,
   getPosition,
   calcTextareaHeight,
   getTimeAgo,
-  isImage,
+  // isImage,
   getDateTimeFormat,
   getYearMonthFormat,
   getTimeFormat,
@@ -28,60 +28,60 @@ function makeId(length = 6) {
   return txt
 }
 
-function makeLorem(size = 100) {
-  var words = [
-    'The sky',
-    'above',
-    'the port',
-    'was',
-    'the color of television',
-    'tuned',
-    'to',
-    'a dead channel',
-    '.',
-    'All',
-    'this happened',
-    'more or less',
-    '.',
-    'I',
-    'had',
-    'the story',
-    'bit by bit',
-    'from various people',
-    'and',
-    'as generally',
-    'happens',
-    'in such cases',
-    'each time',
-    'it',
-    'was',
-    'a different story',
-    '.',
-    'It',
-    'was',
-    'a pleasure',
-    'to',
-    'burn',
-  ]
-  var txt = ''
-  while (size > 0) {
-    size--
-    txt += words[Math.floor(Math.random() * words.length)] + ' '
-  }
-  return txt
-}
+// function makeLorem(size = 100) {
+//   var words = [
+//     'The sky',
+//     'above',
+//     'the port',
+//     'was',
+//     'the color of television',
+//     'tuned',
+//     'to',
+//     'a dead channel',
+//     '.',
+//     'All',
+//     'this happened',
+//     'more or less',
+//     '.',
+//     'I',
+//     'had',
+//     'the story',
+//     'bit by bit',
+//     'from various people',
+//     'and',
+//     'as generally',
+//     'happens',
+//     'in such cases',
+//     'each time',
+//     'it',
+//     'was',
+//     'a different story',
+//     '.',
+//     'It',
+//     'was',
+//     'a pleasure',
+//     'to',
+//     'burn',
+//   ]
+//   var txt = ''
+//   while (size > 0) {
+//     size--
+//     txt += words[Math.floor(Math.random() * words.length)] + ' '
+//   }
+//   return txt
+// }
 
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
-}
+// function getRandomIntInclusive(min, max) {
+//   min = Math.ceil(min)
+//   max = Math.floor(max)
+//   return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
+// }
 
-function delay(ms = 1500) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms)
-  })
-}
+// function delay(ms = 1500) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms)
+//   })
+// }
 
 function formatTimeToDM(time) {
   var date = new Date(time)
@@ -123,15 +123,14 @@ function getTimeAgo(timestamp, locale = 'en') {
   } else if (minutes > 0) {
     value = rtf.format(0 - minutes, 'minute')
   } else {
-    // value = rtf.format(0 - diff, "second")
     value = 'Just now'
   }
   return value
 }
 
-function isImage(url) {
-  return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url)
-}
+// function isImage(url) {
+//   return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(url)
+// }
 
 function getDateTimeFormat(date) {
   const now = new Date()

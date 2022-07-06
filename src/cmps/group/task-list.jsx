@@ -26,7 +26,6 @@ export const TaskList = ({
   const handleKeyDown = (ev) => {
     if (ev.code === 'Enter') {
       ev.preventDefault()
-      // if (!cardText) return
       onAddCard()
     }
   }

@@ -15,8 +15,11 @@ root.render(
   </Provider>
 )
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
-
-// serviceWorkerRegistration.register('./services/worker.js')
+console.log(
+  '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@                       @@@@@@@@@@@@@@\n@@@@@@@@@@                             @@@@@@@@@@@\n@@@@@@@@                                @@@@@@@@@@\n@@@@@@@,    @@@@@@@@    @@@@@@@@         @@@@@@@@@\n@@@@@@@     @@@@@@@@    @@@@@@@@         @@@@@@@@@\n@@@@@@@     @@@@@@@@    @@@@@@@@         @@@@@@@@@\n@@@@@@@     @@@@@@@@                     @@@@@@@@@\n@@@@@@@     @@@@@@@@                     @@@@@@@@@\n@@@@@@@     @@@@@@@@              @@      @@@@@@@@\n@@@@@@@                           @@         @@@@@\n@@@@@@@          @@@@@@@@         @@@@       @@@@@\n@@@@@@@          @@@@@@@@         @@@@@@@&   @@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+)
+console.log('TUSK')
+console.log('Made by:\n')
+console.log('Uri Gruda\nhttps://github.com/Eugee29\nhttps://www.linkedin.com/in/uri-gruda-70b36b22b/')
+console.log('Eran Avichzer\nhttps://github.com/EranAAA\nhttps://www.linkedin.com/in/eran-avichzer/')
+console.log('Tal Ofer\nhttps://github.com/TalAOfer\nhttps://www.linkedin.com/in/tal-ofer-9408b9242/')
